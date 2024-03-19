@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe with Animated Loading Data</title>
+    <style>
+        /* CSS styles will be added here */
+        <style>
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    display: none; /* Initially hide the content */
+}
+
+.loading-data {
+    text-align: center;
+}
+
+.spinner {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border: 4px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
+    </style>
+</head>
+<body>
+    <!-- HTML content will be added here -->
+    <div class="container">
+        <div class="content">
+            <!-- Content goes here -->
+        </div>
+        <div class="loading-data">
+            <p>Loading data...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <script>
+        // Simulate loading data
+        setTimeout(() => {
+            const content = document.querySelector('.content');
+            const loadingData = document.querySelector('.loading-data');
+        
+            content.style.display = 'block';
+            loadingData.style.display = 'none';
+        }, 3000); // 3 seconds delay
+        </script>
+</body>
+</html>

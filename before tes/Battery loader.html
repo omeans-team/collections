@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+         
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #010101;
+            animation: slide-in-top 0.3s both;
+        }
+        .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: not-allowed;
+  scale: 0.7;
+}
+
+.central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  box-shadow: 0.5em 1em 1em red,
+    -0.5em 0.5em 1em lime,
+    0.5em -0.5em 1em rgb(81, 0, 255),
+    -0.5em -0.5em 1em yellow;
+}
+
+.external-shadow {
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0.5em 0.5em 3em rgb(231, 11, 11),
+    -0.5em 0.5em 3em rgb(24, 159, 24),
+    0.5em -0.5em 3em rgb(148, 13, 148),
+    -0.5em -0.5em 3em rgb(236, 236, 57);
+  z-index: 999;
+  animation: rotate 5s linear infinite;
+  background-color: #212121;
+}
+
+.intern {
+  position: absolute;
+  color: rgb(0, 255, 17);
+  z-index: 9999;
+  font-size: 2.5em; /* Set the font size of the icon */
+}
+
+.intern::before {
+  content: "100%";
+  /*content: "\f240"; /* Unicode for the battery icon from Font Awesome */
+    font-family: 'Font Awesome\ 5 Free';
+  animation: percent 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes percent {
+  0% {
+    content: '0%';
+  }
+  5% {
+    content: '5%';
+  }
+  15% {
+    content: '15%';
+  }
+
+  25% {
+    content: '25%';
+  }
+
+  33% {
+    content: '33%';
+  }
+
+  42% {
+    content: '42%';
+  }
+
+  51% {
+    content: '51%';
+  }
+
+  59% {
+    content: '25%';
+  }
+
+  67% {
+    content: '67%';
+  }
+70% {
+    content: '70%';
+  }
+  74% {
+    content: '74%';
+  }
+
+  75% {
+    content: '75%';
+  }
+  
+  86% {
+    content: '86%';
+  }
+  90% {
+    content: '90%';
+  }
+  95% {
+    content: '95%';
+  }
+  96% {
+    content: '96%';
+  }
+  98% {
+    content: '98%';
+  }
+
+  99% {
+    content: '99%';
+  }
+}
+
+.loader {
+  width: 45px;
+  height: 22px;
+  border: 4px solid #00F45B;
+  border-right-color: transparent;
+  padding: 6px;
+  background: repeating-linear-gradient(90deg,#00F45B 0 20px,#0000 0 30px) 
+    left/0% 100% no-repeat content-box content-box;
+  position: relative;
+  animation: p5 2s infinite steps(6);
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: 100%;
+  width: 20px;
+  background: linear-gradient(
+        #0000   calc(50% - 14px),#00F45B 0 calc(50% - 10px),
+        #0000 0 calc(50% + 10px),#00F45B 0 calc(50% + 14px),#0000 0) left /100% 100%,
+    linear-gradient(#00F45B calc(50% - 10px),#0000        0 calc(50% + 10px),#00F45B 0) left /4px 100%,
+    linear-gradient(#0000        calc(50% - 10px),#00F45B 0 calc(50% + 10px),#0000        0) right/4px 100%;
+  background-repeat: no-repeat;
+}
+
+@keyframes p5 {
+  100% {
+    background-size: 120% 100%
+  }
+}
+  
+
+
+    </style>
+</head>
+<body>
+    
+<div class="loader">
+      <div class="intern"><div class="loader"></div>
+        </div>
+      <div class="external-shadow">
+    <div class="central">
+  </div>
+</div>
+</div>
+</body>
+</html>

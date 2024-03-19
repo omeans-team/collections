@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(rgb(44, 44, 65),rgb(41, 43, 63));
+}
+
+.card1{
+    width: 270px;
+    height: 360px;
+    background-image:  url("./cr1.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid rgb(255, 1, 1);
+    transform-style: preserve-3d;
+}
+
+.card1 h1{
+    color: rgb(244, 206, 206);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 17px;
+    transition: 0.5s;
+    font-family: unset;
+}
+
+.hover-image-spider{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 110%;
+    height: 110%;
+    background-image: url('./cr2-removebg-preview.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card1:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("./cr2.jpg");
+}
+
+.card1:hover .hover-image-spider{
+    top: 35%;
+    opacity: 1;
+}
+
+.card1:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px rgb(247, 64, 64),
+                 0px 0px 20px rgb(178, 102, 102);
+}
+
+
+
+.card2{
+    width: 270px;
+    height: 360px;
+    background-image: url("./virat-kohli.jpeg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid rgb(0, 50, 249);
+}
+
+.card2 h1{
+    color: rgb(208, 229, 247);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+    font-family: serif;
+}
+
+.hover-image-iron{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 120%;
+    height: 130%;
+    background-image: url('./vr1-removebg-preview.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card2:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("./virat-kohli.jpeg");
+    box-shadow: blue;
+}
+
+.card2:hover .hover-image-iron{
+    top: 35%;
+    opacity: 1;
+}
+
+.card2:hover h1{
+    font-size: 40px;
+    text-shadow: 3px 8px 10px rgb(70, 38, 158),
+                 3px 7px 20px rgb(0, 90, 175);
+}
